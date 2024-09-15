@@ -337,67 +337,57 @@ h2 {
 
   /*CARROSSEL DE LIVROS*/
   .book-showcase {
-    padding: 2rem 0;
+    padding: 4rem 0;
     background-color: #f8f8f8;
-    position: relative;
-    text-align: center;
     overflow: hidden;
+    text-align: center;
 }
 
 .book-carousel {
-    padding: 0 40px; /* Espaço para os botões de navegação */
-    position: relative;
-    max-width: 1005;
+    padding: 0 40px;
+    max-width: 100%;
 }
-
-.book-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.book-item:hover {
-    transform: translateY(-5px);
-}
+ 
 
 .book-item img {
-    width: 120px;
+    width: 120px; /* Tamanho base para telas maiores */
     height: auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-}
-
-.book-item:hover img {
-    transform: scale(1.05);
-}
-
-.book-info {
-    margin-top: 0.5rem;
-    text-align: center;
 }
 
 .book-info h3 {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Tamanho base para telas maiores */
     margin-bottom: 0.25rem;
 }
-
-.book-info .author {
-    font-size: 0.8rem;
+.book-info p {
+    font-size: 0.8rem; /* Tamanho base para telas maiores */
     color: #666;
     margin-bottom: 0.25rem;
 }
 
-.book-info .price {
-    font-weight: bold;
-    color: #3a5a40;
-    font-size: 0.9rem;
+/* Adicione isso ao seu CSS */
+.swiper-pagination-bullets {
+    bottom: 10px;
+    display: none;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #000;
+    opacity: .2;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--primary-color);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-    background-color: hsla(42, 21%, 76%, .7);;
+    background-color: hsla(42, 21%, 76%, .7);
     color: #333;
     width: 44px;
     height: 60px;
@@ -410,40 +400,45 @@ h2 {
    
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-    background-color: #f0f0f0;
-}
-
 .swiper-button-next:after,
 .swiper-button-prev:after {
     font-size: 0.6rem;
     font-weight: bold;
 }
-
-.swiper-button-next {
-    right: 5px;
-}
-
-.swiper-button-prev {
-    left: 5px;
-}
-
 @media (max-width: 768px) {
     .book-item img {
-        width: 100px; /* Reduz o tamanho das imagens dos livros */
+        width: 135px; /* Um pouco maior para telas médias */
     }
     .book-carousel {
-        padding: 0 30px; /* Reduz o padding lateral */
+        padding: 0;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none; /* Oculta os botões em telas menores */
+    }
+    .swiper-pagination-bullets {
+        display: block;
+    }
+    .book-info h3 {
+        font-size: 0.8rem; /* Tamanho base para telas médias */
+    }
+    .book-info p {
+        font-size: 0.7rem; /* Tamanho base para telas médias */
     }
 }
 
 @media (max-width: 480px) {
     .book-item img {
-        width: 80px; /* Reduz ainda mais o tamanho das imagens para telas muito pequenas */
+        width: 130px; /* Ainda maior para telas pequenas, mas não tanto quanto antes */
     }
-    .book-carousel {
-        padding: 0 20px;
+    .swiper-pagination-bullets {
+        display: block;
+    }
+    .book-info h3 {
+        font-size: 0.7rem; /* Tamanho base para telas médias */
+    }
+    .book-info p {
+        font-size: 0.6rem; /* Tamanho base para telas médias */
     }
 }
 footer {

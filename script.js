@@ -341,29 +341,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Código do carrossel de livros
 const swiper = new Swiper('.book-carousel', {
-    slidesPerView: 2, // Começa com 2 livros visíveis em telas muito pequenas
-    spaceBetween: 10,
+    slidesPerView: 2,
+    spaceBetween: 10, // Espaçamento padrão para telas menores
     loop: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
     breakpoints: {
         320: {
-            slidesPerView: 3,
+            slidesPerView: 2,
             spaceBetween: 10,
         },
         480: {
-            slidesPerView: 4,
+            slidesPerView: 3,
             spaceBetween: 15,
         },
         768: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 20,
         },
         1024: {
-            slidesPerView: 6,
-            spaceBetween: 25,
+            slidesPerView: 5,
+            spaceBetween: 15, // Reduzido de 25 para 15
         },
     }
 });
