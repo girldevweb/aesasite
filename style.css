@@ -431,19 +431,21 @@ h2 {
 
 @media (max-width: 768px) {
     .book-item img {
-        width: 100px;
+        width: 100px; /* Reduz o tamanho das imagens dos livros */
+    }
+    .book-carousel {
+        padding: 0 30px; /* Reduz o padding lateral */
     }
 }
 
 @media (max-width: 480px) {
     .book-item img {
-        width: 80px;
+        width: 80px; /* Reduz ainda mais o tamanho das imagens para telas muito pequenas */
     }
     .book-carousel {
-        padding: 0 30px;
+        padding: 0 20px;
     }
 }
-
 footer {
     background-color: var(--primary-color);
     color: var(--white);

@@ -341,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Código do carrossel de livros
 const swiper = new Swiper('.book-carousel', {
-    slidesPerView: 3,
+    slidesPerView: 2, // Começa com 2 livros visíveis em telas muito pequenas
     spaceBetween: 10,
     loop: true,
     navigation: {
@@ -349,6 +349,10 @@ const swiper = new Swiper('.book-carousel', {
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
+        320: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
         480: {
             slidesPerView: 4,
             spaceBetween: 15,
