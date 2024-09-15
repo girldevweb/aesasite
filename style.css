@@ -341,11 +341,13 @@ h2 {
     background-color: #f8f8f8;
     position: relative;
     text-align: center;
+    overflow: hidden;
 }
 
 .book-carousel {
     padding: 0 40px; /* Espaço para os botões de navegação */
     position: relative;
+    max-width: 1005;
 }
 
 .book-item {
