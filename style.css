@@ -1,0 +1,1711 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+:root {
+    --primary-color: #3a5a40;
+    --secondary-color: #a3b18a;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding-top: 80px;
+}
+
+header {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+    position: relative;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links .dropdown > a {
+    display: flex;
+    align-items: center;
+}
+.fa-chevron-down{
+   font-size: 0.6rem;
+}
+.dropdown-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+
+}
+.dropdown-btn:hover .fa-chevron-down{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.nav-links .dropdown > a i {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    font-size: 0.6rem;
+    position: relative;
+    top: 1px; /* Ajusta ligeiramente a posição vertical */
+}
+
+.nav-links .dropdown:hover > a i {
+    transform: rotate(180deg);
+}
+
+.dropdown{
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1000;
+    
+    
+}
+    
+
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+.dropdown-content a {
+   
+    transition: background-color 0.5s ease;
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    
+}
+
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+   /* margin-left: 1rem;*/
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#search-input {
+    padding: 0.5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+#search-button {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+.search-icon, .menu-icon {
+    display: none;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.icons-container {
+    display: none;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    
+}
+
+.hero {
+    background-image: url('images/casal-header-1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 10px;
+  
+}
+
+.hero-content {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1, .hero h2 {
+    margin-bottom: 1rem;
+}
+
+.two-columns {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+.two-columns:nth-child(even) {
+    background-color: var(--background-color);
+}
+.image-column {
+  flex: 0 0 40%; /* Reduz a largura da coluna da imagem */
+  padding: 2rem;
+}
+
+.text-column {
+  flex: 0 0 60%; /* Aumenta a largura da coluna de texto */
+  padding: 2rem;
+}
+
+.fa-times{
+    font-size: 1.5rem;
+}
+.image-column img {
+    width: 100%;
+    max-width: 400px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: block; /* Garante que a imagem não tenha espaço extra abaixo */
+    margin: 0 auto; /* Centraliza a imagem na coluna */
+}
+
+.image-column img:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.hero-title {
+    font-size: 3rem; /* Tamanho base para telas maiores */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: #ffffff; /* ou a cor que preferir */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.8rem; /* Tamanho base para telas maiores */
+    line-height: 1.3;
+    color: #ffffff; /* ou a cor que preferir */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/*.book-showcase {
+    background-color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.book-carousel {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    padding: 1rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.book-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.book {
+    flex: 0 0 auto;
+    width: 200px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.book img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}*/
+
+  /*CARROSSEL DE LIVROS*/
+  .book-showcase {
+    padding: 2rem 0;
+    background-color: #f8f8f8;
+    position: relative;
+    text-align: center;
+}
+
+.book-carousel {
+    padding: 0 40px; /* Espaço para os botões de navegação */
+    position: relative;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+}
+
+.book-item img {
+    width: 120px;
+    height: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.book-item:hover img {
+    transform: scale(1.05);
+}
+
+.book-info {
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.book-info h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.book-info .author {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+}
+
+.book-info .price {
+    font-weight: bold;
+    color: #3a5a40;
+    font-size: 0.9rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: hsla(42, 21%, 76%, .7);;
+    color: #333;
+    width: 44px;
+    height: 60px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #f0f0f0;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.swiper-button-next {
+    right: 5px;
+}
+
+.swiper-button-prev {
+    left: 5px;
+}
+
+@media (max-width: 768px) {
+    .book-item img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book-item img {
+        width: 80px;
+    }
+    .book-carousel {
+        padding: 0 30px;
+    }
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.quick-links ul {
+    list-style-type: none;
+}
+
+.quick-links a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.social-media a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+/*PÁGINA SERMÕES*/
+
+
+/* Estilos para a seção de sermões */
+.sermoes-playlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    
+}
+
+.coluna-player, .coluna-playlist {
+    flex: 1;
+    min-width: 300px;
+}
+.coluna-player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.capa-sermao {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#sermao-atual {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    color: #067b2e;;
+}
+
+#autor-atual {
+    font-size: 0.9rem;
+    color:#15853b;;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.controles-player {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.controles-player button {
+    background-color: #15853b;;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controles-player button:hover {
+    background-color: #15853b;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0;
+    position: relative;
+}
+
+.progress {
+    width: var(--progress, 0%);
+    height: 100%;
+    background-color: #15853b;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+}
+
+.time-display {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.barra-pesquisa {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.barra-pesquisa input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.barra-pesquisa button {
+    background-color: #15853b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.lista-sermoes {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.lista-sermoes li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-sermoes li:hover {
+    background-color: #f0f0f0;
+}
+
+.lista-sermoes li.active, .lista-sermoes li.active .sermon-duration{
+    /*background-color: #007bff;*/
+    color: #15853b;
+}
+
+.sermon-title {
+    font-weight: 400;
+   
+}
+
+.sermon-duration {
+    color: #666;
+}
+
+
+
+/*PÁGINA LIVROS*/
+
+.livros-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #3a5a40;
+}
+
+.livros-descricao {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.livros-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.livro-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.livro-card:hover {
+    transform: translateY(-5px);
+}
+
+.livro-imagem {
+    position: relative;
+    overflow: hidden;
+    width: 80%; /* Reduz o tamanho da imagem */
+    margin: 10% auto; /* Centraliza a imagem */
+}
+
+.livro-imagem img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.ver-livro {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    transition: bottom 0.3s ease;
+}
+
+.livro-card:hover .ver-livro {
+    bottom: 0;
+}
+
+.livro-titulo {
+    font-size: 1rem;
+    margin: 10px;
+    text-align: center;
+    color: #3a5a40;
+}
+
+.livro-autor {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 10px 10px;
+    text-align: center;
+}
+
+
+
+
+
+/* Estilos para a página Maria José */
+/* Estilos para a página Maria José */
+.maria-jose-hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 60px;
+}
+
+.maria-jose-hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #3a5a40;
+}
+
+.maria-jose-hero p {
+    font-size: 1.4em;
+    color: #666;
+}
+
+.maria-jose-section {
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.maria-jose-biografia, .maria-jose-realizacoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.maria-jose-coluna {
+    flex-basis: calc(50% - 20px);
+}
+
+.maria-jose-imagem img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.maria-jose-imagem img:hover {
+    transform: scale(1.05);
+}
+
+.maria-jose-texto h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #3a5a40;
+}
+
+.maria-jose-texto p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.maria-jose-texto ul {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    color: #666;
+}
+
+.maria-jose-legado {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.maria-jose-legado h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #3a5a40;
+}
+
+.maria-jose-legado p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Animações */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in, transform 0.5s ease-out;
+}
+
+.slide-in-left {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.slide-in-right {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+
+
+
+
+/* Estilos para a página Antônio Elias */
+.antonio-elias-hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 60px;
+}
+
+.antonio-elias-hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #3a5a40;
+}
+
+.antonio-elias-hero p {
+    font-size: 1.4em;
+    color: #666;
+}
+
+.antonio-elias-section {
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.antonio-elias-biografia, .antonio-elias-ministerio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.antonio-elias-coluna {
+    flex-basis: calc(50% - 20px);
+}
+
+.antonio-elias-imagem img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.antonio-elias-imagem img:hover {
+    transform: scale(1.05);
+}
+
+.antonio-elias-texto h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #3a5a40;
+}
+
+.antonio-elias-texto p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.antonio-elias-texto ul {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    color: #666;
+}
+
+.antonio-elias-legado {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.antonio-elias-legado h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #3a5a40;
+}
+
+.antonio-elias-legado p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+    color: #666;
+}
+
+
+
+/* Estilos para a página História do Casal */
+.historia-casal-hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 60px;
+}
+
+.historia-casal-hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #3a5a40;
+}
+
+.historia-casal-hero p {
+    font-size: 1.4em;
+    color: #666;
+}
+
+.historia-casal-section {
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.historia-casal-inicio, .historia-casal-ministerio, .historia-casal-familia {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.historia-casal-coluna {
+    flex-basis: calc(50% - 20px);
+}
+
+.historia-casal-imagem img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.historia-casal-imagem img:hover {
+    transform: scale(1.05);
+}
+
+.historia-casal-texto h2 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    color: #3a5a40;
+}
+
+.historia-casal-texto p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.historia-casal-legado {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.historia-casal-legado h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #3a5a40;
+}
+
+.historia-casal-legado p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+    color: #666;
+}
+
+
+
+/* Estilos para a página de Cartas */
+.cartas-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .cartas-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .cartas-hero h1 {
+    font-size: 3rem;
+    color: #3a5a40;
+    margin-bottom: 1rem;
+  }
+  
+  .cartas-hero p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .carta-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carta-imagem {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .carta-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .carta-conteudo {
+    flex: 2;
+    padding: 2rem;
+  }
+  
+  .carta-conteudo h2 {
+    font-size: 1.8rem;
+    color: #3a5a40;
+    margin-bottom: 1rem;
+  }
+  
+  .carta-conteudo p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .carta-autor {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .cartas-conclusao {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .cartas-conclusao h2 {
+    font-size: 2rem;
+    color: #3a5a40;
+    margin-bottom: 1rem;
+  }
+  
+  .cartas-conclusao p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+ 
+
+  
+  /* Animações AOS (Animate On Scroll) */
+  [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
+  [data-aos="flip-left"] {
+    transform: perspective(2500px) rotateY(-100deg);
+  }
+  
+  [data-aos="flip-right"] {
+    transform: perspective(2500px) rotateY(100deg);
+  }
+  
+  [data-aos="flip-up"] {
+    transform: perspective(2500px) rotateX(-100deg);
+  }
+  
+  [data-aos="flip-down"] {
+    transform: perspective(2500px) rotateX(100deg);
+  }
+  
+  [data-aos].aos-animate {
+    transform: perspective(2500px) rotateY(0) rotateX(0);
+  }
+
+  /* Estilos para a página Sobre Nós */
+.sobre-nos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .sobre-nos-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .sobre-nos-hero h1 {
+    font-size: 3rem;
+    color: #3a5a40;
+    margin-bottom: 1rem;
+  }
+  
+  .sobre-nos-hero p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .sobre-nos-missao,
+  .sobre-nos-valores,
+  .sobre-nos-projetos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+  
+  .sobre-nos-content,
+  .sobre-nos-image {
+    flex: 1;
+  }
+  
+  .sobre-nos-content h2 {
+    font-size: 2rem;
+    color: #3a5a40;
+    margin-bottom: 1rem;
+  }
+  
+  .sobre-nos-content p,
+  .sobre-nos-content ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .sobre-nos-content ul {
+    padding-left: 1.5rem;
+  }
+  
+  .rounded-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sobre-nos-impacto {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .sobre-nos-impacto h2 {
+    font-size: 2rem;
+    color: #3a5a40;
+    margin-bottom: 2rem;
+  }
+  
+  .impacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .impacto-item {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .impacto-item i {
+    font-size: 3rem;
+    color: #3a5a40;
+    margin-bottom: 1rem;
+  }
+  
+  .impacto-item h3 {
+    font-size: 2rem;
+    color: #3a5a40;
+    margin-bottom: 0.5rem;
+  }
+  
+  .impacto-item p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .sobre-nos-participe {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sobre-nos-participe h2 {
+    font-size: 2rem;
+    color: #3a5a40;
+    margin-bottom: 1rem;
+  }
+  
+  .sobre-nos-participe p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-participe {
+    display: inline-block;
+    background-color: #3a5a40;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-participe:hover {
+    background-color: #2c4632;
+  }
+  
+
+
+
+/* Responsividade */
+@media screen and (max-width: 1100px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+        width: 100%;
+        list-style-type: none;
+    }
+    .dropdown {
+        width: 100%;
+    }
+    .dropdown-btn {
+        justify-content: space-between;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .dropdown-content {
+        display: none;
+        padding-left: 1rem;
+        width: 100%;
+        box-shadow: none;
+        background-color: #f1f1f1;
+        position: static;
+    }
+    .dropdown-content a {
+        padding-left: 30px;
+    }
+
+    .dropdown-content.active {
+        display: block;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .icons-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-icon, .menu-icon {
+        display: block;
+        margin-left: 1rem;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .search-container.active {
+        display: flex;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--white);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .search-container.active #search-input {
+        flex-grow: 1;
+        width: calc(100% - 40px);
+    }
+
+    .two-columns {
+        flex-direction: column;
+    }
+
+    .book-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+       /* align-items: center;
+        text-align: center;*/
+    }
+
+    .footer-content > div {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .livros-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .historia-casal-coluna {
+        flex-basis: 100%;
+    }
+
+    .historia-casal-inicio, .historia-casal-ministerio, .historia-casal-familia {
+        flex-direction: column;
+    }
+
+    .historia-casal-hero h1 {
+        font-size: 2.5em;
+    }
+
+    .historia-casal-hero p {
+        font-size: 1.2em;
+    }
+
+    .historia-casal-texto h2 {
+        font-size: 2em;
+    }
+
+    .historia-casal-texto p {
+        font-size: 1em;
+    }
+
+    .historia-casal-legado h2 {
+        font-size: 2.2em;
+    }
+
+    .historia-casal-legado p {
+        font-size: 1.1em;
+    }
+    .antonio-elias-coluna {
+        flex-basis: 100%;
+    }
+
+    .antonio-elias-biografia, .antonio-elias-ministerio {
+        flex-direction: column;
+    }
+
+    .antonio-elias-hero h1 {
+        font-size: 2.5em;
+    }
+
+    .antonio-elias-hero p {
+        font-size: 1.2em;
+    }
+
+    .antonio-elias-texto h2 {
+        font-size: 2em;
+    }
+
+    .antonio-elias-texto p, .antonio-elias-texto ul {
+        font-size: 1em;
+    }
+
+    .antonio-elias-legado h2 {
+        font-size: 2.2em;
+    }
+
+    .antonio-elias-legado p {
+        font-size: 1.1em;
+    }
+    .maria-jose-coluna {
+        flex-basis: 100%;
+    }
+
+    .maria-jose-biografia, .maria-jose-realizacoes {
+        flex-direction: column;
+    }
+
+    .maria-jose-hero h1 {
+        font-size: 2.5em;
+    }
+
+    .maria-jose-hero p {
+        font-size: 1.2em;
+    }
+
+    .maria-jose-texto h2 {
+        font-size: 2em;
+    }
+
+    .maria-jose-texto p, .maria-jose-texto ul {
+        font-size: 1em;
+    }
+
+    .maria-jose-legado h2 {
+        font-size: 2.2em;
+    }
+
+    .maria-jose-legado p {
+        font-size: 1.1em;
+    }
+}
+@media screen and (min-width: 880px) 
+{
+    .hero{
+        min-height: 700px;
+    }
+   
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    .two-columns {
+        flex-direction: column;
+    }
+  
+    .image-column, .text-column {
+        flex: 0 0 100%;
+        padding: 1rem;
+    }
+  
+    .image-column img {
+        max-width: 100%; /* Permite que a imagem ocupe toda a largura em telas menores */
+    }
+   
+    .sermoes-playlist {
+        flex-direction: column;
+    }
+    .livros-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .carousel-button {
+        display: none;
+    }
+    
+    /*.book-carousel-container {
+        padding: 0;
+        overflow-x: auto;
+    }*/
+
+    .book-carousel {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        width: auto;
+        padding: 0 1rem;
+    }
+
+    /*.book-item {
+        flex: 0 0 auto;
+        width: 200px; /* Ajuste conforme necessário */
+        /*margin-right: 0;
+    }*/
+    .sobre-nos-missao,
+    .sobre-nos-valores,
+    .sobre-nos-projetos {
+      flex-direction: column;
+    }
+  
+    .sobre-nos-hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .sobre-nos-content h2 {
+      font-size: 1.8rem;
+    }
+  
+    .sobre-nos-content p,
+    .sobre-nos-content ul {
+      font-size: 1rem;
+    }
+  
+    .impacto-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    .impacto-item i {
+      font-size: 2.5rem;
+    }
+  
+    .impacto-item h3 {
+      font-size: 1.8rem;
+    }
+    .carta-item {
+        flex-direction: column;
+      }
+    
+      .carta-imagem, .carta-conteudo {
+        width: 100%;
+      }
+    
+      .cartas-hero h1 {
+        font-size: 2.5rem;
+      }
+    
+      .carta-conteudo h2 {
+        font-size: 1.5rem;
+      }
+    
+      .carta-conteudo p, .cartas-conclusao p {
+        font-size: 1rem;
+      }
+      .historia-casal-hero {
+        padding: 60px 20px;
+    }
+
+    .historia-casal-hero h1 {
+        font-size: 2.2em;
+    }
+
+    .historia-casal-hero p {
+        font-size: 1.1em;
+    }
+
+    .historia-casal-texto h2 {
+        font-size: 1.8em;
+    }
+
+    .historia-casal-legado {
+        padding: 40px 20px;
+    }
+
+    .historia-casal-legado h2 {
+        font-size: 2em;
+    }
+    .antonio-elias-hero {
+        padding: 60px 20px;
+    }
+
+    .antonio-elias-hero h1 {
+        font-size: 2.2em;
+    }
+
+    .antonio-elias-hero p {
+        font-size: 1.1em;
+    }
+
+    .antonio-elias-texto h2 {
+        font-size: 1.8em;
+    }
+
+    .antonio-elias-legado {
+        padding: 40px 20px;
+    }
+
+    .antonio-elias-legado h2 {
+        font-size: 2em;
+    }
+    .maria-jose-hero {
+        padding: 60px 20px;
+    }
+
+    .maria-jose-hero h1 {
+        font-size: 2.2em;
+    }
+
+    .maria-jose-hero p {
+        font-size: 1.1em;
+    }
+
+    .maria-jose-texto h2 {
+        font-size: 1.8em;
+    }
+
+    .maria-jose-legado {
+        padding: 40px 20px;
+    }
+
+    .maria-jose-legado h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .livros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+/* Ajustes para telas menores */
+
+
+
+/* Ajustes para telas muito pequenas */
+@media screen and (max-width: 320px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}

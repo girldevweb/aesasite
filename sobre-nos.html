@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AesaOnline</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html">AesaOnline</a></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false">
+            Biografia <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="dropdown1" class="dropdown-content">
+            <ul>
+              <li><a href="maria-jose.html">Maria José Elias</a></li>
+              <li><a href="antonio-elias.html">Antonio Elias</a></li>
+              <li><a href="historia-casal.html">História do casal</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="sermoes.html">Sermões</a></li>
+        <li><a href="livros.html">Livros</a></li>
+        <li class="dropdown">
+          <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false">
+            Depoimentos <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="dropdown2" class="dropdown-content">
+            <ul>
+              <li><a href="cartas.html">Cartas</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Pesquisar...">
+      <button id="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="icons-container">
+      <div class="search-icon"><i class="fas fa-search"></i></div>
+      <div class="menu-icon"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <main class="sobre-nos-container">
+    <section class="sobre-nos-hero">
+      <h1>Associação Evangelística Sarça Ardente</h1>
+      <p>Iluminando vidas com o amor de Deus</p>
+    </section>
+
+    <section class="sobre-nos-missao" data-aos="zoom-in-up">
+      <div class="sobre-nos-content">
+        <h2>Nossa Missão</h2>
+        <p>A Associação Evagelística Sarça Ardente (AESA) é uma organização sem fins lucrativos dedicada a estender a mão aos necessitados em nome de Deus. Assim como a sarça ardente que não se consumia, nossa paixão por servir ao próximo permanece acesa, alimentada pelo amor divino.</p>
+      </div>
+      <div class="sobre-nos-image">
+        <img src="images/aesa-sobre-pg.png" alt="Voluntários da AESA em ação" class="rounded-image">
+      </div>
+    </section>
+
+    <section class="sobre-nos-valores" data-aos="fade-right">
+      <div class="sobre-nos-image">
+        <img src="images/pg-sobre-nós.png" alt="Comunidade apoiada pela AESA" class="rounded-image">
+      </div>
+      <div class="sobre-nos-content">
+        <h2>Nossos Valores</h2>
+        <ul>
+          <li>Compaixão: Agir com empatia e amor incondicional</li>
+          <li>Integridade: Manter a transparência e honestidade em todas as ações</li>
+          <li>Fé: Confiar na orientação divina em nosso trabalho</li>
+          <li>Comunidade: Fortalecer laços e promover a união</li>
+          <li>Transformação: Buscar mudanças positivas e duradouras</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sobre-nos-projetos" data-aos="fade-left">
+      <div class="sobre-nos-content">
+        <h2>Nossos Projetos</h2>
+        <p>A AESA atua em diversas frentes para atender às necessidades da comunidade:</p>
+        <ul>
+          <li>Distribuição de alimentos e roupas</li>
+          <li>Apoio educacional para crianças e jovens</li>
+          <li>Assistência a idosos e pessoas com deficiência</li>
+          <li>Programas de capacitação profissional</li>
+          <li>Aconselhamento espiritual e emocional</li>
+        </ul>
+      </div>
+      <div class="sobre-nos-image">
+        <img src="images/sobre-aesa.png" alt="Projeto em andamento da AESA" class="rounded-image">
+      </div>
+    </section>
+
+    <section class="sobre-nos-impacto" data-aos="zoom-in-down">
+      <h2>Nosso Impacto</h2>
+      <div class="impacto-grid">
+        <div class="impacto-item">
+          <i class="fas fa-utensils"></i>
+          <h3>10.000+</h3>
+          <p>Refeições distribuídas</p>
+        </div>
+        <div class="impacto-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>500+</h3>
+          <p>Estudantes apoiados</p>
+        </div>
+        <div class="impacto-item">
+          <i class="fas fa-home"></i>
+          <h3>100+</h3>
+          <p>Famílias assistidas</p>
+        </div>
+        <div class="impacto-item">
+          <i class="fas fa-hands-helping"></i>
+          <h3>1.000+</h3>
+          <p>Voluntários engajados</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre-nos-participe" data-aos="flip-up">
+      <h2>Participe</h2>
+      <p>Junte-se a nós nesta missão de amor e transformação. Sua contribuição, seja através de doações ou voluntariado, pode fazer a diferença na vida de muitas pessoas.</p>
+      <a href="contato.html" class="btn-participe">Faça Parte</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">AesaOnline</div>
+      <div class="quick-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="sermoes.html">Sermões</a></li>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="cartas.html">Depoimentos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <div class="quick-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="sermoes.html">Sermões</a></li>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="cartas.html">Depoimentos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <div class="quick-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="sermoes.html">Sermões</a></li>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="cartas.html">Depoimentos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <h3>Siga-nos</h3>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 AesaOnline. Todos os direitos reservados.
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 200
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

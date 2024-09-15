@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AesaOnline</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html">AesaOnline</a></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button class="nav-link dropdown-btn" data-dropdown="dropdown1" aria-haspopup="true" aria-expanded="false">
+            Biografia <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="dropdown1" class="dropdown-content">
+            <ul>
+              <li><a href="maria-jose.html">Maria José Elias</a></li>
+              <li><a href="antonio-elias.html">Antonio Elias</a></li>
+              <li><a href="historia-casal.html">História do casal</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="sermoes.html">Sermões</a></li>
+        <li><a href="livros.html">Livros</a></li>
+        <li class="dropdown">
+          <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false">
+            Depoimentos <i class="fas fa-chevron-down"></i>
+          </button>
+          <div id="dropdown2" class="dropdown-content">
+            <ul>
+              <li><a href="cartas.html">Cartas</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="sobre-nos.html">Sobre Nós</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Pesquisar...">
+      <button id="search-button"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="icons-container">
+      <div class="search-icon"><i class="fas fa-search"></i></div>
+      <div class="menu-icon"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+  
+  <main class="cartas-container">
+    <section class="cartas-hero">
+      <h1>Cartas de Gratidão</h1>
+      <p>Testemunhos de Vidas Transformadas pelo Amor e Dedicação do Rev. Antonio Elias e Maria José</p>
+    </section>
+
+    <section class="carta-item" data-aos="flip-left">
+      <div class="carta-imagem">
+        <img src="images/carta-1-depoimentos.png" alt="Carta de agradecimento" class="carta-img">
+      </div>
+      <div class="carta-conteudo">
+        <h2>Uma Luz na Escuridão</h2>
+        <p>"Em um momento de profunda tristeza e desespero, o Rev. Antonio Elias e Maria José foram como anjos enviados por Deus. Suas palavras de conforto e suas orações me deram forças para seguir em frente. Sou eternamente grato pelo amor e apoio que recebi deste casal abençoado."</p>
+        <p class="carta-autor">- João Silva</p>
+      </div>
+    </section>
+
+    <section class="carta-item" data-aos="flip-right">
+      <div class="carta-conteudo">
+        <h2>Renovação da Fé</h2>
+        <p>"Eu havia perdido minha fé e me afastado da igreja, mas o testemunho de vida do Rev. Antonio e Dona Maria José me inspirou a retornar. Sua dedicação incansável e amor genuíno pelas pessoas me mostraram o verdadeiro significado de ser um seguidor de Cristo."</p>
+        <p class="carta-autor">- Maria Oliveira</p>
+      </div>
+      <div class="carta-imagem">
+        <img src="images/carta-depoimentos.png" alt="Carta de testemunho" class="carta-img">
+      </div>
+    </section>
+
+    <section class="carta-item" data-aos="flip-up">
+      <div class="carta-imagem">
+        <img src="images/carta-depoimentos.png" alt="Carta de agradecimento" class="carta-img">
+      </div>
+      <div class="carta-conteudo">
+        <h2>Um Casamento Restaurado</h2>
+        <p>"Nosso casamento estava à beira do fim, mas graças ao aconselhamento amoroso e sábio do Rev. Antonio e Maria José, conseguimos superar nossas diferenças. Eles nos ensinaram o verdadeiro significado do perdão e do amor incondicional. Hoje, somos um casal feliz e grato."</p>
+        <p class="carta-autor">- Carlos e Ana Rodrigues</p>
+      </div>
+    </section>
+
+    <section class="carta-item" data-aos="flip-down">
+      <div class="carta-conteudo">
+        <h2>Apoio nos Momentos Difíceis</h2>
+        <p>"Durante minha luta contra o câncer, o Rev. Antonio e Dona Maria José estiveram ao meu lado em cada etapa. Suas visitas ao hospital, suas orações e seu apoio emocional foram fundamentais para minha recuperação. Eles são verdadeiros exemplos do amor de Cristo em ação."</p>
+        <p class="carta-autor">- Fernanda Santos</p>
+      </div>
+      <div class="carta-imagem">
+        <img src="images/carta-1-depoimentos.png" alt="Carta de gratidão" class="carta-img">
+      </div>
+    </section>
+
+    <section class="cartas-conclusao">
+      <h2>Um Legado de Amor</h2>
+      <p>Estas são apenas algumas das inúmeras vidas tocadas pelo ministério do Rev. Antonio Elias e Maria José. Seu amor, dedicação e fé inabalável continuam a inspirar e transformar vidas, deixando um legado duradouro de esperança e compaixão.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">AesaOnline</div>
+      <div class="quick-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="sermoes.html">Sermões</a></li>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="cartas.html">Depoimentos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <div class="quick-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="sermoes.html">Sermões</a></li>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="cartas.html">Depoimentos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <div class="quick-links">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#biografia">Biografia</a></li>
+          <li><a href="sermoes.html">Sermões</a></li>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="cartas.html">Depoimentos</a></li>
+          <li><a href="sobre-nos.html">Sobre Nós</a></li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <h3>Siga-nos</h3>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2024 AesaOnline. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+</body>
+
+</html>
